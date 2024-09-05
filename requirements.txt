@@ -1,5 +1,12 @@
 streamlit
-langchain
-huggingface-hub
-#watsonxlangchain
-langchain-ibm
+# langchain
+# huggingface-hub
+# #watsonxlangchain
+# langchain-ibm
+
+
+# Replicate for LLama 3
+replicate
+
+# For environment variable
+python-dotenv
