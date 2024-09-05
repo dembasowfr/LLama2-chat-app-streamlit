@@ -1,29 +1,108 @@
-In this small project, we’ll build a Llama 2 chatbot in Python using Streamlit for the frontend, while the LLM backend is handled through API calls to the Llama 2 model hosted on Replicate. 
 
+# Llama 2 Chat Application 🦙💬
 
-Following are the steps to take to build the app:
-1. Get a Replicate API token
-2. Set up the coding environment
-3. Build the app
-4. Set the API token
-5. Deploy the app
+![LLama2 Chat application](./images/llama2.png)
 
-What is Llama 2?
-Meta released the second version of their open-source Llama language model on July 18, 2023. They’re democratizing access to this model by making it free to the community for both research and commercial use. They also prioritize the transparent and responsible use of AI, as evidenced by their Responsible Use Guide.
+In this project, we will build a **Llama 2 chatbot** in Python using **Streamlit** for the frontend, while leveraging the Llama 2 model hosted on **Replicate** for the backend.
 
-Here are the five key features of Llama 2:
+---
 
-Llama 2 outperforms other open-source LLMs in benchmarks for reasoning, coding proficiency, and knowledge tests.
-The model was trained on almost twice the data of version 1, totaling 2 trillion tokens. Additionally, the training included over 1 million new human annotations and fine-tuning for chat completions.
-The model comes in three sizes, each trained with 7, 13, and 70 billion parameters.
-Llama 2 supports longer context lengths, up to 4096 tokens.
-Version 2 has a more permissive license than version 1, allowing for commercial use.
+## Table of Contents 📑
+1. [Introduction](#introduction)
+2. [What is Llama 2?](#what-is-llama-2)
+3. [Key Features of Llama 2](#key-features-of-llama-2)
+4. [App Overview](#app-overview)
+5. [Getting Started](#getting-started)
+   - [1. Get a Replicate API token](#1-get-a-replicate-api-token)
+   - [2. Set up the coding environment](#2-set-up-the-coding-environment)
+   - [3. Build the app](#3-build-the-app)
+   - [4. Set the API token](#4-set-the-api-token)
+   - [5. Deploy the app](#5-deploy-the-app)
+6. [Try It Out](#try-it-out)
+7. [Wrapping Up](#wrapping-up)
+8. [References](#references)
 
+---
 
-App overview
-Here is a high-level overview of the Llama2 chatbot app:
+## Introduction
 
-The user provides two inputs: (1) a Replicate API token (if requested) and (2) a prompt input (i.e. ask a question).
-An API call is made to the Replicate server, where the prompt input is submitted and the resulting LLM-generated response is obtained and displayed in the app.
+This guide walks you through building a chatbot using **Llama 2**, an open-source large language model by Meta. Our app will have a **Streamlit** interface, and we’ll call the **Replicate API** to communicate with the Llama 2 backend for generating responses to user inputs.
 
+---
 
+## What is Llama 2?
+
+**Llama 2** is Meta’s open-source language model, released on **July 18, 2023**. Meta has made the model free for research and commercial use while promoting transparent and responsible AI through their **Responsible Use Guide**.
+
+### Key Features of Llama 2:
+- **Performance**: Outperforms other open-source LLMs in reasoning, coding, and knowledge benchmarks.
+- **Training Data**: Trained on **2 trillion tokens**, nearly double the data of version 1.
+- **Human Annotations**: Includes over **1 million human annotations** for fine-tuning chat completions.
+- **Model Sizes**: Available in three sizes: 7B, 13B, and 70B parameters.
+- **Longer Context**: Supports up to **4096 tokens** for extended context understanding.
+- **Commercial License**: Offers a more permissive license, allowing commercial use.
+
+---
+
+## App Overview 🛠️
+
+The **Llama 2 Chat Application** allows users to interact with the Llama 2 model via a simple frontend. The key components are:
+1. **User Input**: Users provide a Replicate API token and a message prompt.
+2. **Backend**: The app makes API calls to Replicate, which processes the prompt and returns an AI-generated response.
+3. **Response Display**: The chatbot displays the response in the app interface.
+
+![Application Architecture](./images/Llama2-schematic-diagram.jpg)
+
+---
+
+## Getting Started 🚀
+
+Follow these steps to build your Llama 2 chat app:
+
+### 1. Get a Replicate API Token
+   - Visit [Replicate](https://replicate.com/) to create an account and obtain a free API token.
+
+### 2. Set Up the Coding Environment
+   - Ensure you have **Python** and **Streamlit** installed.
+   - Install the necessary libraries by creating a `requirements.txt` file and running:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+### 3. Build the App
+   - Write the Python code for your **Streamlit** app. The app will take inputs from the user (API token and prompt), send them to Replicate, and display the response.
+
+### 4. Set the API Token
+   - Add a section to your code to request the Replicate API token if not already provided.
+
+### 5. Deploy the App
+   - Use **Streamlit Cloud** or another hosting platform to deploy your app online.
+
+---
+
+## Try It Out 🧪
+
+Ready to test the app? Follow these simple steps:
+
+1. Visit the live app at: [Llama 2 Chat Assistance](https://llama2-chat-assistance.streamlit.app/)
+2. Sign up for a free API key on [Replicate](https://replicate.com/).
+3. Enter your Replicate API token when prompted by the app.
+4. Type your prompt into the chatbox and enjoy the experience!
+
+![Application Messaging UI](./images/llama2.png)
+
+---
+
+## Wrapping Up 🎉
+
+Congratulations on building and trying out your **Llama 2 Chat Application**! Whether you're a developer or just curious, I hope you enjoyed this project. In this app, we used the **7B version** of Llama 2, and the model parameters (such as **temperature** and **top_p**) were set to arbitrary values.
+
+Feel free to experiment with these settings to see how they affect the AI's responses. You can even upgrade to the **Pro version**, where you can specify the model and fine-tune parameters for deeper customization.
+
+---
+
+## References 📚
+
+- [Streamlit](https://www.streamlit.io)
+- [Llama 2 Chat App Tutorial](https://blog.streamlit.io/how-to-build-a-llama-2-chatbot/)
+- [Replicate](https://www.replicate.com)
